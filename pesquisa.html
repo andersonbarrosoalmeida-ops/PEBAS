@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Pesquisar</title>
+    <link rel="stylesheet" href="pesquisa.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Cadastros Salvos</h1>
+            <button id="btnVoltar" onclick="window.location='index.html'">⬅ Voltar</button>
+        </header>
+
+        <div class="filtros">
+            <div class="busca">
+                <input type="text" id="campoBusca" placeholder="🔍 Pesquisar por apelido ou nome..." />
+                <button id="btnLimparBusca">✕</button>
+            </div>
+            <div class="filtro-grupo">
+                <label>Filtrar por Grupo:</label>
+                <select id="filtroGrupo">
+                    <option value="">Todos</option>
+                    <option value="CV">CV</option>
+                    <option value="PCC">PCC</option>
+                    <option value="Não Identificado">Não Identificado</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="listaCadastros" class="grid">
+            <p id="mensagemVazio" style="display:none;">Nenhum cadastro encontrado.</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" style="display:none;">
+        <span id="fecharModal" class="fechar">&times;</span>
+        <img id="imagemModal" class="modal-conteudo" />
+        <p id="instrucaoModal" style="display:none;">👆 Toque e segure na imagem para salvar.</p>
+    </div>
+
+    <script src="pesquisa.js"></script>
+</body>
+</html>
